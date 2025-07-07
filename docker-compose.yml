@@ -1,0 +1,10 @@
+services:
+  # Serviço da sua aplicação Python/FastAPI
+  api:
+    build: .
+    container_name: imersao_api
+    ports:
+      - "8000:8000"
+    volumes:
+      # Sincroniza o código local com o contêiner para o live-reload
+      - .:/app  
